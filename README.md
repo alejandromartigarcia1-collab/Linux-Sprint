@@ -20,6 +20,12 @@ We proceed to edit this file an add the actual FQDN to the domain controller
 
 
 
+<img width="631" height="131" alt="imagen" src="https://github.com/user-attachments/assets/e77da347-3d6d-4ac4-b232-ef60bb549406" />
+
+
+
+
+
 <img width="798" height="341" alt="imagen" src="https://github.com/user-attachments/assets/09f7ee55-1976-4699-abee-e882b24fada9" />
 
 
