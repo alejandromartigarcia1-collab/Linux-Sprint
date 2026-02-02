@@ -86,6 +86,8 @@ We changed the default permission and ownership of the /var/lib/samba/ntp_signd/
 We add the following lines with the DNS IP and allow the subnet of our network
 <img width="802" height="547" alt="imagen" src="https://github.com/user-attachments/assets/c45bda87-c6a5-475a-b388-c3a6e9b1752a" />
 
+We initialize the service and check its status to ensure it is functioning correctly
+<img width="403" height="44" alt="imagen" src="https://github.com/user-attachments/assets/b5083434-c798-4624-af01-14ffc8df1922" />
 
-
+<img width="802" height="352" alt="imagen" src="https://github.com/user-attachments/assets/9ae21ca1-d1d7-4ce7-b330-76e6b7dfc0b1" />
 
