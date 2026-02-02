@@ -82,4 +82,10 @@ We initialize the service and check its status to ensure it is functioning corre
 We changed the default permission and ownership of the /var/lib/samba/ntp_signd/ntp_signed directory for time synchronization
 <img width="551" height="36" alt="imagen" src="https://github.com/user-attachments/assets/679df16d-dcf3-4dc0-a57d-f90c370f1872" />
 
+`nano /etc/chrony/chrony.conf`
+We add the following lines with the DNS IP and allow the subnet of our network
+<img width="802" height="547" alt="imagen" src="https://github.com/user-attachments/assets/c45bda87-c6a5-475a-b388-c3a6e9b1752a" />
+
+
+
 
