@@ -79,6 +79,7 @@ We initialize the service and check its status to ensure it is functioning corre
 <img width="805" height="578" alt="imagen" src="https://github.com/user-attachments/assets/cf3a6fef-17a1-4848-b401-f5a1131e90be" />
 
 
-
+We changed the default permission and ownership of the /var/lib/samba/ntp_signd/ntp_signed directory for time synchronization
+<img width="551" height="36" alt="imagen" src="https://github.com/user-attachments/assets/679df16d-dcf3-4dc0-a57d-f90c370f1872" />
 
 
