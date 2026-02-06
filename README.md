@@ -115,9 +115,21 @@ Verify authentication on the Kerberos server using the user manager
 
 <img width="603" height="58" alt="imagen" src="https://github.com/user-attachments/assets/65c2f14b-cfbd-412e-a0db-99299a01f084" />
 
+<img width="541" height="121" alt="imagen" src="https://github.com/user-attachments/assets/a5c53eb9-445a-4918-b86b-3d110ae71864" />
 
 
 <img width="710" height="40" alt="imagen" src="https://github.com/user-attachments/assets/b3070cd2-72e4-494f-bd14-5ac07cbbdc5a" />
+
+
+Log in to the server via SMB for checks
+
+`sudo smbclient //localhost/netlogon -U 'administrator'`
+
+<img width="591" height="78" alt="imagen" src="https://github.com/user-attachments/assets/e43de933-1169-4b0c-8d7e-92bc33ab8730" />
+
+
+
+
 
 
 
