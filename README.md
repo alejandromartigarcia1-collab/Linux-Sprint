@@ -137,6 +137,15 @@ Verify the integrity of the Samba configuration file
 
 <img width="450" height="666" alt="imagen" src="https://github.com/user-attachments/assets/b18f299c-b956-4958-a56d-4489de8dbbb8" />
 
+Verify the functionality of WINDOWS AD DC 2008
+
+`sudo samba-tool domain level show`
+
+<img width="500" height="107" alt="imagen" src="https://github.com/user-attachments/assets/6b95ef8c-59e5-4d96-870c-7acd9c31af06" />
+
+
+
+
 
 
 
