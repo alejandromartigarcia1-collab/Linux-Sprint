@@ -159,6 +159,14 @@ Verify the functionality of WINDOWS AD DC 2008
 
 ## 2. Linux and Windows Client Integration
 
+Update packages and the system
+
+`sudo apt update` 
+<img width="718" height="150" alt="imagen" src="https://github.com/user-attachments/assets/6f4f6456-baf5-4cd4-997c-9f9a413a53fa" />
+
+`sudo apt upgrade`
+
+
 
 
 
