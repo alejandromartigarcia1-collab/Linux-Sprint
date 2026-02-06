@@ -135,3 +135,9 @@ Verify the integrity of the Samba configuration file
 
 `testparm`
 
+<img width="450" height="666" alt="imagen" src="https://github.com/user-attachments/assets/b18f299c-b956-4958-a56d-4489de8dbbb8" />
+
+
+
+
+
