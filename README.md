@@ -1,5 +1,7 @@
 # Linux-Sprint
 
+ ## 1. Promove Domain Controller
+ 
  We change the hostname with this command 
 
 `sudo hostnamectl set-hostname ls12`
