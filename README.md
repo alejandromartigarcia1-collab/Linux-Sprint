@@ -180,3 +180,22 @@ Check SSH state
 
 <img width="717" height="303" alt="imagen" src="https://github.com/user-attachments/assets/c11c775c-0c94-4d51-851d-04b056c48ee0" />
 
+
+Change hostname
+`sudo hostnamectl set-hostname lc12`
+hostname -f
+
+
+<img width="460" height="72" alt="imagen" src="https://github.com/user-attachments/assets/25069b5f-c4d4-47de-9ac9-8b4045a32060" />
+
+
+
+
+
+<img width="347" height="23" alt="imagen" src="https://github.com/user-attachments/assets/3ee4ed8b-172b-4ece-8d48-652026784e09" />
+
+
+
+
+
+
