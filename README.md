@@ -166,11 +166,17 @@ Update packages and the system
 
 `sudo apt upgrade`
 
+<img width="1190" height="362" alt="imagen" src="https://github.com/user-attachments/assets/8a12c418-ac51-4d48-aa86-faed7b35be2c" />
 
 
+We install ssh service
 
+`sudo apt-get install ssh`
 
+<img width="708" height="185" alt="imagen" src="https://github.com/user-attachments/assets/8745d1ea-bfbc-4469-8254-554181492278" />
 
+Check SSH state
+`sudo systemctl status ssh`
 
-
+<img width="717" height="303" alt="imagen" src="https://github.com/user-attachments/assets/c11c775c-0c94-4d51-851d-04b056c48ee0" />
 
