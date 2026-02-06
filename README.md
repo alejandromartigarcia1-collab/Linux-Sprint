@@ -109,5 +109,16 @@ Verify available resources in Active DIrectory Samba
 <img width="556" height="161" alt="imagen" src="https://github.com/user-attachments/assets/1d5e33aa-b4e7-43ef-9471-98e892ab747c" />
 
 
+Verify authentication on the Kerberos server using the user manager
+
+`kinit administrator@LAB12.LAN`
+
+<img width="603" height="58" alt="imagen" src="https://github.com/user-attachments/assets/65c2f14b-cfbd-412e-a0db-99299a01f084" />
+
+
+
+<img width="710" height="40" alt="imagen" src="https://github.com/user-attachments/assets/b3070cd2-72e4-494f-bd14-5ac07cbbdc5a" />
+
+
 
 
