@@ -105,5 +105,9 @@ Verify domain names
 
 Verify available resources in Active DIrectory Samba
 `smbclient -L clockwork.local -N`
+
 <img width="556" height="161" alt="imagen" src="https://github.com/user-attachments/assets/1d5e33aa-b4e7-43ef-9471-98e892ab747c" />
+
+
+
 
