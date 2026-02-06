@@ -90,9 +90,20 @@ We initialize the service and check its status to ensure it is functioning corre
 <img width="403" height="44" alt="imagen" src="https://github.com/user-attachments/assets/b5083434-c798-4624-af01-14ffc8df1922" />
 
 <img width="802" height="352" alt="imagen" src="https://github.com/user-attachments/assets/9ae21ca1-d1d7-4ce7-b330-76e6b7dfc0b1" />
-l
 
 
+Verify domain names 
+
+`host -t A lab12.lan`
+
+<img width="310" height="54" alt="imagen" src="https://github.com/user-attachments/assets/247487de-c970-45fb-9eba-92fb4864e103" />
+
+`host -t A ls12.lab12.lan`
+
+<img width="346" height="57" alt="imagen" src="https://github.com/user-attachments/assets/ea8f1764-f027-491b-8985-17e6bb6a413d" />
 
 
+Verify available resources in Active DIrectory Samba
+`smbclient -L clockwork.local -N`
+<img width="556" height="161" alt="imagen" src="https://github.com/user-attachments/assets/1d5e33aa-b4e7-43ef-9471-98e892ab747c" />
 
