@@ -105,6 +105,17 @@ Verify domain names
 <img width="346" height="57" alt="imagen" src="https://github.com/user-attachments/assets/ea8f1764-f027-491b-8985-17e6bb6a413d" />
 
 
+Verify that the Kerberos and LDAP service records point to the FQDN of our Samba Active Directory server.
+
+`host -t SRV _kerberos._udp.lab12.lan`
+<img width="515" height="38" alt="imagen" src="https://github.com/user-attachments/assets/302eea64-0d36-40fb-b392-70df9eec6fde" />
+
+`host -t SRV _ldap._tcp.clockwork.local`
+
+<img width="491" height="41" alt="imagen" src="https://github.com/user-attachments/assets/2d2826f8-0a65-426a-8e34-a5bebe87294e" />
+
+
+
 Verify available resources in Active DIrectory Samba
 `smbclient -L clockwork.local -N`
 
