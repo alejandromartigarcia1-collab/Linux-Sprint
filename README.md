@@ -157,6 +157,9 @@ Verify the functionality of WINDOWS AD DC 2008
 <img width="500" height="107" alt="imagen" src="https://github.com/user-attachments/assets/6b95ef8c-59e5-4d96-870c-7acd9c31af06" />
 
 
+##2. Linux and Windows Client Integration
+
+
 
 
 
