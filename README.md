@@ -118,8 +118,6 @@ Verify authentication on the Kerberos server using the user manager
 <img width="541" height="121" alt="imagen" src="https://github.com/user-attachments/assets/a5c53eb9-445a-4918-b86b-3d110ae71864" />
 
 
-<img width="710" height="40" alt="imagen" src="https://github.com/user-attachments/assets/b3070cd2-72e4-494f-bd14-5ac07cbbdc5a" />
-
 
 Log in to the server via SMB for checks
 
@@ -127,10 +125,13 @@ Log in to the server via SMB for checks
 
 <img width="591" height="78" alt="imagen" src="https://github.com/user-attachments/assets/e43de933-1169-4b0c-8d7e-92bc33ab8730" />
 
+Change administrator user password
 
+`sudo samba-tool user setpassword administrator`
 
+<img width="710" height="40" alt="imagen" src="https://github.com/user-attachments/assets/b3070cd2-72e4-494f-bd14-5ac07cbbdc5a" />
 
+Verify the integrity of the Samba configuration file
 
-
-
+`testparm`
 
