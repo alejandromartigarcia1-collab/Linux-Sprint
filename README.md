@@ -190,10 +190,12 @@ hostname -f
 
 
 
-
+Configure file /etc/hosts
+`nano /etc/hosts`
 
 <img width="347" height="23" alt="imagen" src="https://github.com/user-attachments/assets/3ee4ed8b-172b-4ece-8d48-652026784e09" />
 
+<img width="716" height="243" alt="imagen" src="https://github.com/user-attachments/assets/c05ac32f-439f-407f-9eb9-3d8ac8382dce" />
 
 
 
