@@ -198,6 +198,9 @@ Configure file /etc/hosts
 <img width="716" height="243" alt="imagen" src="https://github.com/user-attachments/assets/c05ac32f-439f-407f-9eb9-3d8ac8382dce" />
 
 
+We checked connectivity to the domain using the ping command
+`ping lab12.lan`
+<img width="663" height="152" alt="image" src="https://github.com/user-attachments/assets/845a1d93-cd53-4fb8-860e-e07a93489425" />
 
 
 
