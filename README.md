@@ -391,3 +391,20 @@ Authenticate with GUI
 <img width="489" height="74" alt="imagen" src="https://github.com/user-attachments/assets/1405ea13-b647-4546-9346-570b5dd731b6" />
 
 
+
+
+
+<img width="613" height="483" alt="imagen" src="https://github.com/user-attachments/assets/8be61fb0-a733-41c2-a4b2-7a765df495f0" />
+
+
+<img width="609" height="481" alt="imagen" src="https://github.com/user-attachments/assets/5ea4733b-6137-4e58-b857-f14c1d1ab896" />
+
+
+<img width="612" height="481" alt="imagen" src="https://github.com/user-attachments/assets/70fd1e12-8126-4fb4-834f-8b3f26bb1c26" />
+
+<img width="611" height="477" alt="imagen" src="https://github.com/user-attachments/assets/a82d7d9a-8a55-4cd6-b5c3-d98ce2220a9b" />
+
+<img width="407" height="482" alt="imagen" src="https://github.com/user-attachments/assets/d8c410d4-c0b4-4dfb-9b68-5cd976326a1d" />
+
+
+
