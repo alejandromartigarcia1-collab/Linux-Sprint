@@ -230,3 +230,15 @@ Install necessary packages
 
 
 
+We verified authentication on the Kerberos server using the user manager
+
+`kinit administrator@LAB12.LAN`
+<img width="594" height="57" alt="imagen" src="https://github.com/user-attachments/assets/bbe0e8d6-a145-4305-9334-7fcaffa4f749" />
+
+`klist`
+<img width="520" height="119" alt="imagen" src="https://github.com/user-attachments/assets/0405eebe-9aeb-4fe1-9341-9ea3aec70157" />
+
+
+
+
+
