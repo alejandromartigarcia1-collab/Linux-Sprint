@@ -353,11 +353,25 @@ Verify the Winbind nsswitch module with the getent command.
 
 <img width="795" height="75" alt="imagen" src="https://github.com/user-attachments/assets/e54074c0-8cd9-4c56-baf7-712fb0b5cf42" />
 
+We configured pam-auth-update to authenticate with domain accounts and to automatically create directories.
+
+`sudo pam-auth-update`
+<img width="350" height="21" alt="imagen" src="https://github.com/user-attachments/assets/af2a2bf9-b546-4041-9e0f-0dd874cf5000" />
+
+<img width="757" height="445" alt="imagen" src="https://github.com/user-attachments/assets/9550ef33-07bc-4535-a19a-4452f580b0a6" />
 
 
+Edit the /etc/pam.d/common-account file to automatically create directories.
+
+`sudo nano /etc/pam.d/common-account`
+<img width="487" height="24" alt="imagen" src="https://github.com/user-attachments/assets/d62dd0bb-be12-4df5-a74a-24218b4482de" />
+
+Add to the end of the file.
+
+session required pam_mkhomedir.so skel=/etc/skel/ umask=0022
 
 
-
+<img width="786" height="532" alt="imagen" src="https://github.com/user-attachments/assets/cc293e06-9297-4a46-b06e-c7eb03e7379c" />
 
 
 
