@@ -239,6 +239,66 @@ We verified authentication on the Kerberos server using the user manager
 <img width="520" height="119" alt="imagen" src="https://github.com/user-attachments/assets/0405eebe-9aeb-4fe1-9341-9ea3aec70157" />
 
 
+Move the smb.conf file and create a backup
+`mv /etc/samba/smb.conf /etc/samba/smb.conf.initial`
+
+<img width="491" height="20" alt="imagen" src="https://github.com/user-attachments/assets/1e1fde2e-991e-472c-b80e-cea68e656273" />
+
+
+Create an empty smb.conf file.
+
+`nano /etc/samba/smb.conf`
+
+<img width="422" height="17" alt="imagen" src="https://github.com/user-attachments/assets/6f795203-931c-4f2b-ac78-7b1a0f005ff3" />
+
+We add the following lines
+[global]
+        workgroup = LAB12
+        realm = LAB12.LAN
+        netbios name = ud101
+        security = ADS
+        dns forwarder = 192.168.30.40
+
+idmap config * : backend = tdb
+idmap config *:range = 50000-1000000
+
+   template homedir = /home/%D/%U
+   template shell = /bin/bash
+   winbind use default domain = true
+   winbind offline logon = false
+   winbind nss info = rfc2307
+   winbind enum users = yes
+   winbind enum groups = yes
+
+  vfs objects = acl_xattr
+  map acl inherit = Yes
+  store dos attributes = Yes
+
+
+<img width="732" height="386" alt="imagen" src="https://github.com/user-attachments/assets/a1ad0024-b608-4669-b422-be1df542a250" />
+
+Restart all Samba daemons
+
+`sudo systemctl restart smbd nmbd`
+<img width="448" height="22" alt="imagen" src="https://github.com/user-attachments/assets/f31b2edb-98b2-4852-8404-7b7d35c33d5e" />
+
+
+Stop unnecessary services
+
+`sudo systemctl stop samba-ad-dc`
+<img width="443" height="23" alt="imagen" src="https://github.com/user-attachments/assets/f3d6f5b9-de2e-4c7e-a46e-1dccca5e6ce2" />
+
+
+Enable samba services
+
+`sudo systemctl enable smbd nmbd`
+
+<img width="789" height="115" alt="imagen" src="https://github.com/user-attachments/assets/40e8baea-f2ca-4ccf-8d62-90a8cb3c05d8" />
+
+
+
+
+
 
 
 
