@@ -202,5 +202,16 @@ We checked connectivity to the domain using the ping command
 `ping lab12.lan`
 <img width="663" height="152" alt="image" src="https://github.com/user-attachments/assets/845a1d93-cd53-4fb8-860e-e07a93489425" />
 
+INSTALL ntpdate
+`sudo apt-get install ntpdate`
+
+<img width="713" height="427" alt="imagen" src="https://github.com/user-attachments/assets/7dc08504-a255-4d04-8e5c-2c6236345ab2" />
+
+`sudo ntpdate -q lab12.lan`
+`sudo ntpdate lab12.lan`
+
+
+<img width="767" height="94" alt="imagen" src="https://github.com/user-attachments/assets/7d76e4a1-b8c6-4ea3-b908-e80dd6eaa96f" />
+
 
 
