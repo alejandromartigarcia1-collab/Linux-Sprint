@@ -296,6 +296,65 @@ Enable samba services
 <img width="789" height="115" alt="imagen" src="https://github.com/user-attachments/assets/40e8baea-f2ca-4ccf-8d62-90a8cb3c05d8" />
 
 
+Join Ubuntu Desktop to SAMBA AD DC
+
+`sudo net ads join -U administrator`
+<img width="508" height="26" alt="imagen" src="https://github.com/user-attachments/assets/3b2bb6cc-2744-430e-a2d7-ccd375f9a1bc" />
+
+
+
+
+List SAMBA AD teams
+`sudo samba-tool computer list`
+
+<img width="378" height="69" alt="imagen" src="https://github.com/user-attachments/assets/a01d1e3c-f5d4-4ff6-86ee-fa2bb2c84eaa" />
+
+
+
+We verify from the client's own end whether the connection is valid
+`net ads testjoin`
+<img width="366" height="44" alt="imagen" src="https://github.com/user-attachments/assets/a041644d-4ec4-4a4c-8994-9337983a8d8c" />
+
+
+
+CONFIGURE AD ACCOUNT AUTHENTICATION
+Edit the Name Service Switch (NSS) configuration file.
+
+`sudo nano /etc/nsswitch.conf`
+<img width="425" height="28" alt="imagen" src="https://github.com/user-attachments/assets/b54fbe04-95e4-4777-ae2f-ee24d24b1a54" />
+
+<img width="793" height="433" alt="imagen" src="https://github.com/user-attachments/assets/66a97ad6-0543-4690-a904-fe784cc8aa82" />
+
+
+Restart winbind service
+
+`sudo systemctl restart winbind`
+<img width="433" height="19" alt="imagen" src="https://github.com/user-attachments/assets/6bd46a2c-e4e6-4c6f-9b01-5192b10c9838" />
+
+
+Check if Ubuntu Desktop has been integrated into the domain.
+
+`wbinfo -u`
+`wbinfo -g`
+
+
+<img width="322" height="364" alt="imagen" src="https://github.com/user-attachments/assets/c7bcc3ed-fb1e-4cea-932d-955fc72ce5eb" />
+
+
+
+Verify the Winbind nsswitch module with the getent command.
+`sudo getent passwd| grep administrator`
+<img width="517" height="33" alt="imagen" src="https://github.com/user-attachments/assets/95b19adc-a219-4149-b6e1-7b84199324b3" />
+
+`sudo getent group|grep 'domain admins'`
+<img width="493" height="36" alt="imagen" src="https://github.com/user-attachments/assets/29377847-b312-491b-b851-243d74657580" />
+
+`id administrator`
+
+<img width="795" height="75" alt="imagen" src="https://github.com/user-attachments/assets/e54074c0-8cd9-4c56-baf7-712fb0b5cf42" />
+
+
+
 
 
 
