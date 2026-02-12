@@ -411,6 +411,7 @@ Create Users (Alice, Bob, Charlie):
 <img width="416" height="25" alt="image" src="https://github.com/user-attachments/assets/486c6bd4-a288-484c-bb74-2a9c2d60e302" />
 
 `sudo samba-tool user create Bob`
+
 <img width="402" height="27" alt="image" src="https://github.com/user-attachments/assets/4a658e64-1ec9-4974-bb12-e2accb9bc7ca" />
 
 `sudo samba-tool user create Charlie`
