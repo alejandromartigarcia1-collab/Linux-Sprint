@@ -408,11 +408,21 @@ Authenticate with GUI
 
 Create Users (Alice, Bob, Charlie):
 `sudo samba-tool user create Alice`
+<img width="416" height="25" alt="image" src="https://github.com/user-attachments/assets/486c6bd4-a288-484c-bb74-2a9c2d60e302" />
+
 `sudo samba-tool user create Bob`
+<img width="402" height="27" alt="image" src="https://github.com/user-attachments/assets/4a658e64-1ec9-4974-bb12-e2accb9bc7ca" />
+
 `sudo samba-tool user create Charlie`
+<img width="437" height="22" alt="image" src="https://github.com/user-attachments/assets/b590bc40-bcfa-4d9e-ab6d-c8b7f98ceb54" />
 
+Create Grupos (IT_Admins, Students):
 
+`sudo samba-tool group add IT_Admins`
+<img width="435" height="25" alt="image" src="https://github.com/user-attachments/assets/551a9e87-754e-4e29-839c-983f36c265ad" />
 
+`sudo samba-tool group add Students`
+<img width="427" height="23" alt="image" src="https://github.com/user-attachments/assets/8cdadbf0-1d3b-4066-b87d-35a172025cc7" />
 
 
 
