@@ -434,6 +434,18 @@ Add Users to Groups
 <img width="585" height="22" alt="image" src="https://github.com/user-attachments/assets/70b59cc6-e834-4119-9cc0-ca415971a4c1" />
 
 
+Create the OU hierarchy:
+
+`sudo samba-tool ou add "OU=IT_Department,DC=lab12,DC=lan"`
+<img width="628" height="36" alt="image" src="https://github.com/user-attachments/assets/6fe6093e-7216-42ad-8c34-1d458ac5f202" />
+
+
+`sudo samba-tool ou add "OU=Students,DC=lab12,DC=lan"`
+<img width="593" height="32" alt="image" src="https://github.com/user-attachments/assets/c8d3c92f-49c6-4597-9eaf-11d89a28683c" />
+
+`sudo samba-tool ou add "OU=HR_Department,DC=lab12,DC=lan"`
+<img width="632" height="35" alt="image" src="https://github.com/user-attachments/assets/66847513-2859-458c-96dd-81113129f2d1" />
+
 
 
 
