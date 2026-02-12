@@ -425,5 +425,11 @@ Create Grupos (IT_Admins, Students):
 `sudo samba-tool group add Students`
 <img width="427" height="23" alt="image" src="https://github.com/user-attachments/assets/8cdadbf0-1d3b-4066-b87d-35a172025cc7" />
 
+Add Users to Groups
+`sudo samba-tool group addmembers IT_Admins Alice`
+
+`sudo samba-tool group addmembers IT_Admins Bob, Charlie`
+
+
 
 
