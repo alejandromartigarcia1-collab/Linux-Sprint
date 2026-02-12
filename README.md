@@ -406,5 +406,13 @@ Authenticate with GUI
 
 <img width="407" height="482" alt="imagen" src="https://github.com/user-attachments/assets/d8c410d4-c0b4-4dfb-9b68-5cd976326a1d" />
 
+Create Users (Alice, Bob, Charlie):
+`sudo samba-tool user create Alice`
+`sudo samba-tool user create Bob`
+`sudo samba-tool user create Charlie`
+
+
+
+
 
 
