@@ -37,10 +37,11 @@ Remove symbolic link to the /etc/resolv.conf file
 `sudo unlink /etc/resolv.conf`
 <img width="382" height="20" alt="imagen" src="https://github.com/user-attachments/assets/596162ac-cb9f-49ff-94d7-e7bc392f9728" />
 
-
+We recreated the /etc/resolv.conf file
+`sudo nano /etc/resolv.conf`
 <img width="802" height="110" alt="imagen" src="https://github.com/user-attachments/assets/736ebab6-1fa6-430b-85e5-c3229df50664" />
 
-
+We make the /etc/resolv.conf file immutable so that it cannot be changed
 `sudo chattr +i /etc/resolv.conf`
 <img width="407" height="28" alt="imagen" src="https://github.com/user-attachments/assets/772b9b80-3d01-4288-8f97-1aaa1ab82880" />
 
