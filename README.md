@@ -412,15 +412,18 @@ Authenticate with GUI
 <img width="407" height="482" alt="imagen" src="https://github.com/user-attachments/assets/d8c410d4-c0b4-4dfb-9b68-5cd976326a1d" />
 
 Create Users (Alice, Bob, Charlie):
-`sudo samba-tool user create Alice`
-<img width="416" height="25" alt="image" src="https://github.com/user-attachments/assets/486c6bd4-a288-484c-bb74-2a9c2d60e302" />
+`sudo samba-tool user create Alice --userou="OU=IT_Department`
+<img width="663" height="77" alt="imagen" src="https://github.com/user-attachments/assets/23515350-6a24-4771-aafb-fa9e324e0f74" />
 
-`sudo samba-tool user create Bob`
 
-<img width="402" height="27" alt="image" src="https://github.com/user-attachments/assets/4a658e64-1ec9-4974-bb12-e2accb9bc7ca" />
 
-`sudo samba-tool user create Charlie`
-<img width="437" height="22" alt="image" src="https://github.com/user-attachments/assets/b590bc40-bcfa-4d9e-ab6d-c8b7f98ceb54" />
+`sudo samba-tool user create Bob --userou="OU=Students"`
+<img width="601" height="70" alt="imagen" src="https://github.com/user-attachments/assets/44ad168f-9be1-4157-9505-365f9fc04114" />
+
+
+`sudo samba-tool user create Charlie --userou= "OU=Students"`
+<img width="626" height="68" alt="imagen" src="https://github.com/user-attachments/assets/5946eb66-0bab-4c26-b946-3d219d400e91" />
+
 
 Create Grupos (IT_Admins, Students):
 
@@ -451,6 +454,14 @@ Create the OU hierarchy:
 `sudo samba-tool ou add "OU=HR_Department,DC=lab12,DC=lan"`
 <img width="632" height="35" alt="image" src="https://github.com/user-attachments/assets/66847513-2859-458c-96dd-81113129f2d1" />
 
+
+### Introduction to GPOs (Group Policy Objects)
+
+1. Create a New GPO
+
+We will create a specific policy for students called Student_Policy.
+
+`sudo samba-tool gpo create "Student_Policy"`
 
 
 
