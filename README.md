@@ -457,11 +457,36 @@ Create the OU hierarchy:
 
 ### Introduction to GPOs (Group Policy Objects)
 
-1. Create a New GPO
+#### 1. Password Policy Configuration
 
-We will create a specific policy for students called Student_Policy.
+According to the security requirements, all users must have a minimum password length of 8 characters.
 
-`sudo samba-tool gpo create "Student_Policy"`
+`sudo samba-tool domain passwordsettings set --min-pwd-length=8 --complexity=on`
+
+<img width="784" height="130" alt="imagen" src="https://github.com/user-attachments/assets/4d484726-1ff2-42cd-a799-8e92e9b7e8e8" />
+
+#### 2. Account Lockout Policy 
+
+To mitigate brute-force attacks, we implement a lockout policy: 3 failed attempts lead to a 5-minute lockout.
+
+1. Set the threshold (3 attempts)
+`sudo samba-tool domain passwordsettings set --account-lockout-threshold=3`
+
+<img width="742" height="55" alt="imagen" src="https://github.com/user-attachments/assets/1585bde3-d978-49ba-ace5-3532cb3874c3" />
+
+
+2. Set the lockout duration (5 minutes)
+sudo samba-tool domain passwordsettings set --account-lockout-duration=5
+
+<img width="731" height="53" alt="imagen" src="https://github.com/user-attachments/assets/f3d5a0e6-1a31-4a10-b6f2-5c880cb3b099" />
+
+3. Set the reset counter timer (5 minutes)
+`sudo samba-tool domain passwordsettings set --reset-account-lockout-after=5`
+
+<img width="731" height="51" alt="imagen" src="https://github.com/user-attachments/assets/7880d848-5a6c-4534-a8c2-bc1a031c7efb" />
+
+
+
 
 
 
