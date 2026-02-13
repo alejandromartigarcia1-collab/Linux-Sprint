@@ -486,6 +486,51 @@ sudo samba-tool domain passwordsettings set --account-lockout-duration=5
 <img width="731" height="51" alt="imagen" src="https://github.com/user-attachments/assets/7880d848-5a6c-4534-a8c2-bc1a031c7efb" />
 
 
+#### 3. Verification and Graphical Testing
+
+
+###### Account Lockout checking
+
+To verify the Account Lockout Policy I configured in Hour 5, I performed a brute-force simulation.
+
+1. I attempted to log in with the user Bob using a wrong password.
+
+2. I repeated this 3 times to trigger the threshold.
+3. The Result: On the 4th attempt, the system displayed the following message:
+
+ <img width="796" height="719" alt="imagen" src="https://github.com/user-attachments/assets/82c44e16-1e08-4aea-97e2-f7cdc99302b3" />
+
+4. I waited 5 minutes (as configured in the lockout duration) and verified that the   account was automatically unlocked.
+
+
+
+###### Verifying the Organizational Structure 
+
+
+
+`sudo samba-tool ou list`
+<img width="358" height="104" alt="imagen" src="https://github.com/user-attachments/assets/6ffa1252-2d2b-4f6d-9c2f-05d5d44005c0" />
+
+
+###### Auditing User Placement and Distinguished Names 
+`sudo samba-tool user show Alice | grep dn`
+<img width="507" height="106" alt="imagen" src="https://github.com/user-attachments/assets/e89984d2-9745-4b93-9303-36af4480e04e" />
+
+
+##### Group Membership Validation
+
+'sudo samba-tool group listmembers IT_Admins`
+`sudo samba-tool group listmembers Students`
+
+<img width="591" height="86" alt="imagen" src="https://github.com/user-attachments/assets/ae88b763-ca0b-4359-b2f5-72bc19de5bca" />
+
+
+##### Security Policy Audit 
+
+`sudo samba-tool domain passwordsettings show`
+
+<img width="513" height="205" alt="imagen" src="https://github.com/user-attachments/assets/49879fd8-6c84-42f0-87e1-858cfdb4bffc" />
+
 
 
 
