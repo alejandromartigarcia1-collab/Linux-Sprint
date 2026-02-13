@@ -39,6 +39,8 @@ Edit the network file
 
 <img width="802" height="110" alt="imagen" src="https://github.com/user-attachments/assets/736ebab6-1fa6-430b-85e5-c3229df50664" />
 
+
+`sudo chattr +i /etc/resolv.conf`
 <img width="407" height="28" alt="imagen" src="https://github.com/user-attachments/assets/772b9b80-3d01-4288-8f97-1aaa1ab82880" />
 
 
