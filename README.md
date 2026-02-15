@@ -632,3 +632,38 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 
 <img width="490" height="62" alt="image" src="https://github.com/user-attachments/assets/4b3b45c1-ff0c-4920-88fd-f18b69079795" />
 
+
+## Storage Checks
+
+#### 1. Verificación de Dispositivos y Particiones
+
+
+`lsblk`
+<img width="620" height="298" alt="image" src="https://github.com/user-attachments/assets/17e3fa2e-3e02-481e-8e41-f37aa518d58e" />
+
+
+#### 2. Mounting Point Status and Space
+
+`df -h /srv/samba/Data`
+
+<img width="510" height="66" alt="image" src="https://github.com/user-attachments/assets/d3e1f9a9-211c-4e5a-a253-958bdb5def92" />
+
+
+#### 3. Persistence Check (fstab)
+
+`cat /etc/fstab | grep Data`
+
+<img width="851" height="40" alt="image" src="https://github.com/user-attachments/assets/3c3c326b-c035-432a-8f5b-ea7394c57ef4" />
+
+
+#### 4. Validation of Extended Attributes and ACL
+
+`findmnt -n -o OPTIONS /srv/samba/Data`
+
+<img width="517" height="47" alt="image" src="https://github.com/user-attachments/assets/ef509aaa-9e02-4ea4-93d9-5f1e422a4a53" />
+
+
+
+
+
+
