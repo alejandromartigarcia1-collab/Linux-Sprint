@@ -757,5 +757,17 @@ Restart the Samba service to apply changes
 
 ## 3. Advanced Permissions and User Privileges
 
+### Step 1: Installing and Enabling ACL Support
+
+#### Install the ACL Package
+
+`sudo apt update && sudo apt install acl -y`
+
+
+
+
+
+
+
 
 
