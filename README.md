@@ -548,7 +548,7 @@ Ping the domain to verify DNS resolution
 <img width="597" height="152" alt="image" src="https://github.com/user-attachments/assets/6c2d4c83-c52f-43b6-b225-90d6383f42aa" />
 
 
-## Storage Management
+## 1. Storage Management
 
 ### Step 1: Create the New Disk
 
@@ -664,6 +664,88 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 
 
 
+## 2. Creating the Directory Structure and Configuring Network Shares
 
 
+### Step 1: Creating the Directory Hierarchy
+
+#### 1. Create the root folders for each department
+
+`sudo mkdir -p /srv/samba/Data/FinanceDocs`
+
+`sudo mkdir -p /srv/samba/Data/HRDocs`
+
+`sudo mkdir -p /srv/samba/Data/Public`
+
+<img width="555" height="86" alt="image" src="https://github.com/user-attachments/assets/aadd8f37-c0b1-4d56-96fa-7dfe4c1051aa" />
+
+#### 2. Verify the structure
+
+`ls -l /srv/samba/Data`
+
+<img width="482" height="125" alt="image" src="https://github.com/user-attachments/assets/9379cb03-c380-4bd4-988b-35ac13e3f3d1" />
+
+### Step 2: Configuring Samba Network Shares
+
+#### 1. Open the Samba configuration file:
+
+`sudo nano /etc/samba/smb.conf`
+
+#### 2. Add the Share Definitions:
+
+[FinanceDocs]
+    comment = Financial Department Documents
+    path = /srv/samba/Data/FinanceDocs
+    read only = no
+    browseable = yes
+    guest ok = no
+    vfs objects = acl_xattr
+
+[HRDocs]
+    comment = Human Resources Confidential Files
+    path = /srv/samba/Data/HRDocs
+    read only = no
+    browseable = yes
+    guest ok = no
+    vfs objects = acl_xattr
+
+[Public]
+    comment = General Public Access Folder
+    path = /srv/samba/Data/Public
+    read only = no
+    browseable = yes
+    guest ok = yes
+    vfs objects = acl_xattr
+
+
+<img width="650" height="826" alt="image" src="https://github.com/user-attachments/assets/efa9cd53-bafc-49f2-a416-0b84dea8aa1b" />
+
+#### 3. Validate and Restart:
+
+Check for syntax errors
+
+`testparm`
+
+<img width="467" height="132" alt="image" src="https://github.com/user-attachments/assets/13e1c51c-e60d-4585-bc3d-dcd2fb24af43" />
+
+Restart the Samba service to apply changes
+
+`sudo systemctl restart samba-ad-dc`
+
+<img width="481" height="22" alt="image" src="https://github.com/user-attachments/assets/9356308d-3935-4b3f-8143-f7e59e4e8d83" />
+    
+
+### 4. Verifications
+
+#### Local Share Listing
+
+`smbclient -L localhost -N`
+
+<img width="627" height="247" alt="image" src="https://github.com/user-attachments/assets/3e607ae5-571a-4f67-ac73-04cec65797ed" />
+
+#### Directory Ownership Check
+
+`ls -ld /srv/samba/Data/*`
+
+<img width="632" height="103" alt="image" src="https://github.com/user-attachments/assets/1d984dde-e425-4f85-9b01-3aad1b874891" />
 
