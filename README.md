@@ -694,31 +694,35 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 #### 2. Add the Share Definitions:
 
 [FinanceDocs]
-    comment = Financial Department Documents
-    path = /srv/samba/Data/FinanceDocs
+    comment = Finance Department Documents
+    path = /srv/samba/FinanceDocs
+    valid users = @Students, @"Domain Admins"
     read only = no
     browseable = yes
-    guest ok = no
-    vfs objects = acl_xattr
+    create mask = 0660
+    directory mask = 0770
 
 [HRDocs]
-    comment = Human Resources Confidential Files
-    path = /srv/samba/Data/HRDocs
+    comment = HR Department Documents
+    path = /srv/samba/HRDocs
+    valid users = @IT_Admins, @"Domain Admins"
     read only = no
     browseable = yes
-    guest ok = no
-    vfs objects = acl_xattr
+    create mask = 0660
+    directory mask = 0770
 
 [Public]
-    comment = General Public Access Folder
-    path = /srv/samba/Data/Public
-    read only = no
+    comment = Public Shared Documents (Read-Only)
+    path = /srv/samba/Public
+    valid users = @"Domain Users"
+    read only = yes
     browseable = yes
-    guest ok = yes
-    vfs objects = acl_xattr
+    write list = @"Domain Admins"
 
 
-<img width="650" height="826" alt="image" src="https://github.com/user-attachments/assets/efa9cd53-bafc-49f2-a416-0b84dea8aa1b" />
+
+<img width="562" height="862" alt="image" src="https://github.com/user-attachments/assets/ba062069-d25b-43fa-963d-30b9f811896f" />
+
 
 #### 3. Validate and Restart:
 
@@ -748,4 +752,10 @@ Restart the Samba service to apply changes
 `ls -ld /srv/samba/Data/*`
 
 <img width="632" height="103" alt="image" src="https://github.com/user-attachments/assets/1d984dde-e425-4f85-9b01-3aad1b874891" />
+
+
+
+## 3. Advanced Permissions and User Privileges
+
+
 
