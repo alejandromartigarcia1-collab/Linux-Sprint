@@ -533,5 +533,102 @@ To verify the Account Lockout Policy I configured in Hour 5, I performed a brute
 
 
 
+# SPRINT 3
 
+## Connectivity verification
+
+Check the domain status
+`sudo samba-tool domain info 127.0.0.1`
+<img width="458" height="148" alt="image" src="https://github.com/user-attachments/assets/ae1e256c-0dde-47e5-83f4-61b10f8e999d" />
+
+
+Ping the domain to verify DNS resolution
+`ping -c 3 lab12.lan`
+
+<img width="597" height="152" alt="image" src="https://github.com/user-attachments/assets/6c2d4c83-c52f-43b6-b225-90d6383f42aa" />
+
+
+## Storage Management
+
+### Step 1: Create the New Disk
+
+We need to create the new storage device (usually 20GB or 40GB).
+
+<img width="1025" height="595" alt="image" src="https://github.com/user-attachments/assets/361a78ba-7147-4173-ab4d-44d88ed749b7" />
+
+
+### Step 2: Identify the New Disk
+
+We need to locate the new storage device, in this case 20 GB
+
+`lsblk`
+
+<img width="582" height="230" alt="image" src="https://github.com/user-attachments/assets/c4e68074-9f56-497b-b1a0-f4975e2638fb" />
+
+
+### Step 3: Create a Partition Table
+
+We will use fdisk to initialize the disk and create a primary partition
+
+`sudo fdisk /dev/sdb`
+
+fdisk command sequence:
+
+n: Create a new partition.
+
+p: Define it as primary.
+
+1: Assign the partition number.
+
+Enter (twice): Accept the default start and end sectors.
+
+w: Write the changes to the disk.
+
+
+<img width="677" height="397" alt="image" src="https://github.com/user-attachments/assets/78e3d80b-87b1-4671-bbd2-7cd360d7f362" />
+
+
+
+
+### Step 4: Formatting the Filesystem
+
+For Samba to correctly manage Active Directory permissions, the disk must be formatted in EXT4.
+
+`sudo mkfs.ext4 /dev/sdb1`
+
+<img width="520" height="182" alt="image" src="https://github.com/user-attachments/assets/aaa52e39-9562-45f1-9d2f-fd68049fb510" />
+
+
+### Step 5: Permanent Mount Point
+
+#### 1.Create mountpoint:
+
+`sudo mkdir -p /srv/samba/Data`
+
+<img width="391" height="27" alt="image" src="https://github.com/user-attachments/assets/631bf1b6-dcb7-47c5-8f64-019291f3122c" />
+
+
+#### 2.Configure automatic mounting (/etc/fstab):
+We obtain the disk's UUID so that the mount persists after rebooting:
+
+`sudo blkid /dev/sdb1`
+
+<img width="802" height="55" alt="image" src="https://github.com/user-attachments/assets/43f930b2-e609-4df1-904d-330d894943a0" />
+
+Copy the UUID code and add it to the configuration file
+
+`sudo nano /etc/fstab`
+
+Add this line to the end:
+UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
+
+<img width="931" height="283" alt="image" src="https://github.com/user-attachments/assets/621a52c0-f4cd-41e6-b168-72ab2261e54c" />
+
+
+#### 3.Mount the disc:
+
+`sudo mount -a`
+`df -h /srv/samba/Data`
+
+<img width="490" height="62" alt="image" src="https://github.com/user-attachments/assets/4b3b45c1-ff0c-4920-88fd-f18b69079795" />
 
