@@ -769,5 +769,7 @@ Restart the Samba service to apply changes
 
 
 
+# SPRINT 4. Domain Trust
+
 
 
