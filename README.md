@@ -880,7 +880,7 @@ Find the PID
 
 Stop the process
 
-`kill -19 <PID>´
+`kill -19 PID`
 
 <img width="288" height="26" alt="imagen" src="https://github.com/user-attachments/assets/612c9297-1d6d-4246-817a-aa366baa9cef" />
 
@@ -889,7 +889,7 @@ Stop the process
 
 Resume process
 
-`kill -18 <PID>
+`kill -18 PID`
 
 <img width="1563" height="473" alt="imagen" src="https://github.com/user-attachments/assets/80e19292-b10e-41c4-8ebf-1dba21e7f671" />
 
