@@ -669,7 +669,7 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 
 ### Step 1: Creating the Directory Hierarchy
 
-#### 1. Create the root folders for each department
+**1. Create the root folders for each department**
 
 `sudo mkdir -p /srv/samba/Data/FinanceDocs`
 
@@ -679,7 +679,7 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 
 <img width="555" height="86" alt="image" src="https://github.com/user-attachments/assets/aadd8f37-c0b1-4d56-96fa-7dfe4c1051aa" />
 
-#### 2. Verify the structure
+**2. Verify the structure**
 
 `ls -l /srv/samba/Data`
 
@@ -687,11 +687,11 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 
 ### Step 2: Configuring Samba Network Shares
 
-#### 1. Open the Samba configuration file:
+**1. Open the Samba configuration file:**
 
 `sudo nano /etc/samba/smb.conf`
 
-#### 2. Add the Share Definitions:
+**2. Add the Share Definitions:**
 
 [FinanceDocs]
     comment = Finance Department Documents
@@ -724,7 +724,7 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 <img width="562" height="862" alt="image" src="https://github.com/user-attachments/assets/ba062069-d25b-43fa-963d-30b9f811896f" />
 
 
-#### 3. Validate and Restart:
+**3. Validate and Restart:**
 
 Check for syntax errors
 
@@ -739,15 +739,15 @@ Restart the Samba service to apply changes
 <img width="481" height="22" alt="image" src="https://github.com/user-attachments/assets/9356308d-3935-4b3f-8143-f7e59e4e8d83" />
     
 
-### 4. Verifications
+### Step 3. Verifications
 
-#### Local Share Listing
+**Local Share Listing**
 
 `smbclient -L localhost -N`
 
 <img width="627" height="247" alt="image" src="https://github.com/user-attachments/assets/3e607ae5-571a-4f67-ac73-04cec65797ed" />
 
-#### Directory Ownership Check
+**Directory Ownership Check**
 
 `ls -ld /srv/samba/Data/*`
 
