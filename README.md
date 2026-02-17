@@ -907,5 +907,14 @@ Resume process
 
 # SPRINT 4. Domain Trust
 
+We install another Linux Sever to make the domain trust
+
+<img width="801" height="512" alt="image" src="https://github.com/user-attachments/assets/e485bfc4-b333-436a-a402-f5399eea63a8" />
+
+<img width="801" height="512" alt="image" src="https://github.com/user-attachments/assets/52e791f3-6942-4936-b1fb-8b16f111e492" />
+
+<img width="798" height="320" alt="image" src="https://github.com/user-attachments/assets/440d3c14-49c0-4242-8bf5-fe312c9f06e1" />
+
+
 
 
