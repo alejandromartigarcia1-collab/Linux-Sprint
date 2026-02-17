@@ -848,7 +848,7 @@ List all active services:
 
 `systemctl list-units --type=service --state=running`
 
-<img width="798" height="469" alt="imagen" src="https://github.com/user-attachments/assets/7302992d-1513-424d-8528-9a03744609bb" />
+<img width="798" height="469" alt="imagen" src="https://github.com/user-attachments/assets/7302992d-1513-424d-8528-9a03744609bb" /> <br>
 
 
 **Interacting with Processes (Signals)**
