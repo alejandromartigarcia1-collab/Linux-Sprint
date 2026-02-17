@@ -18,7 +18,7 @@ We proceed to edit this file an add the actual FQDN to the domain controller
 
 `ǹano /etc/netplan/00-installer-config.yaml`
 
-<img width="800" height="329" alt="imagen" src="https://github.com/user-attachments/assets/6a502cc5-fdf7-454c-bbe3-8cf1e78978a4" />
+<img width="800" height="329" alt="imagen" src="https://github.com/user-attachments/assets/6a502cc5-fdf7-454c-bbe3-8cf1e78978a4" /> <br>
 
 Edit the network file
 <img width="795" height="102" alt="imagen" src="https://github.com/user-attachments/assets/495f7dc0-e14f-49c1-9405-8be5337216b9" />
