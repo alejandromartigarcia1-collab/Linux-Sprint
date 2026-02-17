@@ -764,8 +764,134 @@ Restart the Samba service to apply changes
 `sudo apt update && sudo apt install acl -y`
 
 
+## 4. Task and Process Management in Linux (Samba AD DC)
+
+### Processes
+
+The **top** Utility
+
+The standard tool for monitoring processes is top. It provides a dynamic, real-time view of a running system.
+
+**PID (Process ID):** The unique numerical identifier for the process.
+
+**%CPU & %MEM:** Shows the percentage of resources the process is consuming.
+
+**Command:** The name of the executable or script.
+
+<img width="185" height="20" alt="imagen" src="https://github.com/user-attachments/assets/14bed00a-c0bd-45e3-80cc-4b15ac4fb3b3" />
 
 
+<img width="801" height="371" alt="imagen" src="https://github.com/user-attachments/assets/197661f5-aee2-4a27-9fe2-88422b196d36" />
+
+
+**The htop Utility**
+
+For a more intuitive, colorful, and "Task Manager-like" experience, htop is the preferred choice for administrators. It allows you to scroll vertically and horizontally to see all processes and their full command lines.
+
+<img width="634" height="134" alt="imagen" src="https://github.com/user-attachments/assets/0b79537a-2c61-432f-8539-d9dd3d074ab0" />
+
+<img width="798" height="364" alt="imagen" src="https://github.com/user-attachments/assets/8ffee18a-3ef0-4983-9f06-b322e4dc6b58" />
+
+Key Interactions in htop:
+
+    F2 (Setup): Customize columns and display colors.
+
+    F6 (Sort): Sort processes by CPU, Memory, or Priority.
+
+    F9 (Kill): Send signals (like SIGTERM or SIGKILL) to a process directly from the interface.
+
+
+**The ps (Process Status) Command**
+
+The **ps** command is used to view currently running processes.
+
+    View all processes: ps aux
+
+        a: Lift the "only myself" restriction.
+
+        u: Display user-oriented format (shows which user owns the process).
+
+        x: List processes without a controlling terminal (background services).
+
+Filter for Samba processes: 
+To verify that your Active Directory services are running, you can pipe the output to grep:
+
+`ps aux | grep samba`
+
+<img width="795" height="245" alt="imagen" src="https://github.com/user-attachments/assets/d9dad8a9-70d3-4342-ad55-df73a9328e02" />
+
+
+**Service Management Commands:**
+
+Check status (Running/Stopped):
+
+`sudo systemctl status samba-ad-dc`
+
+<img width="802" height="399" alt="imagen" src="https://github.com/user-attachments/assets/adb7f9ee-c7d6-47f2-9dff-fb81baa2f535" />
+
+
+ Restart a hung service:
+
+`sudo systemctl restart samba-ad-dc`
+
+<img width="426" height="20" alt="imagen" src="https://github.com/user-attachments/assets/d2921b5e-1fba-40a5-b692-1cf94f4d64a5" />
+
+
+ Enable service to start on boot:
+
+`sudo systemctl enable samba-ad-dc`
+
+<img width="800" height="69" alt="imagen" src="https://github.com/user-attachments/assets/fbbb5ded-cde1-4a74-8aad-7525276ac856" />
+
+
+List all active services:
+
+`systemctl list-units --type=service --state=running`
+
+<img width="798" height="469" alt="imagen" src="https://github.com/user-attachments/assets/7302992d-1513-424d-8528-9a03744609bb" />
+
+**Interacting with Processes (Signals)**
+
+If a process is unresponsive, Linux uses "Signals" to communicate.
+
+**Graceful termination (Equivalent to "End Task"):**
+`kill <PID> (Sends SIGTERM).`
+
+**Forced termination (Kill immediately):**
+
+`kill -9 <PID>` (Sends SIGKILL).
+
+**Kill all processes by name:**
+
+`sudo killall smbd`
+
+#### Exercise Train
+
+Execute sl
+
+<img width="797" height="433" alt="imagen" src="https://github.com/user-attachments/assets/81ee956f-97c3-4203-880c-674755a4aa2b" />
+
+Find the PID
+
+`pgrep -sl`
+
+<img width="268" height="126" alt="imagen" src="https://github.com/user-attachments/assets/acc2b3c5-6bd7-4472-8a9d-ede1c98a371a" />
+
+
+Stop the process
+
+`kill -19 <PID>´
+
+<img width="288" height="26" alt="imagen" src="https://github.com/user-attachments/assets/612c9297-1d6d-4246-817a-aa366baa9cef" />
+
+<img width="657" height="291" alt="imagen" src="https://github.com/user-attachments/assets/1fb29639-cc40-4409-aaa2-a540d5a5485c" />
+
+
+Resume process
+
+`kill -18 <PID>
+
+<img width="1563" height="473" alt="imagen" src="https://github.com/user-attachments/assets/80e19292-b10e-41c4-8ebf-1dba21e7f671" />
 
 
 
