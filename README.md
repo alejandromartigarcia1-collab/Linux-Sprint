@@ -850,6 +850,7 @@ List all active services:
 
 <img width="798" height="469" alt="imagen" src="https://github.com/user-attachments/assets/7302992d-1513-424d-8528-9a03744609bb" />
 
+
 **Interacting with Processes (Signals)**
 
 If a process is unresponsive, Linux uses "Signals" to communicate.
