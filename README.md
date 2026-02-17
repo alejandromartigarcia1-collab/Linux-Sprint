@@ -601,14 +601,14 @@ For Samba to correctly manage Active Directory permissions, the disk must be for
 
 ### Step 5: Permanent Mount Point
 
-#### 1.Create mountpoint:
+ **1.Create mountpoint:**
 
 `sudo mkdir -p /srv/samba/Data`
 
 <img width="391" height="27" alt="image" src="https://github.com/user-attachments/assets/631bf1b6-dcb7-47c5-8f64-019291f3122c" />
 
 
-#### 2.Configure automatic mounting (/etc/fstab):
+**2.Configure automatic mounting (/etc/fstab):**
 We obtain the disk's UUID so that the mount persists after rebooting:
 
 `sudo blkid /dev/sdb1`
@@ -625,7 +625,7 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 <img width="931" height="283" alt="image" src="https://github.com/user-attachments/assets/621a52c0-f4cd-41e6-b168-72ab2261e54c" />
 
 
-#### 3.Mount the disc:
+**3.Mount the disc:**
 
 `sudo mount -a`
 `df -h /srv/samba/Data`
@@ -633,30 +633,30 @@ UUID=your-uuid-here /srv/samba/Data ext4 user_xattr,acl,barrier=1 1 1
 <img width="490" height="62" alt="image" src="https://github.com/user-attachments/assets/4b3b45c1-ff0c-4920-88fd-f18b69079795" />
 
 
-## Storage Checks
+### Storage Checks
 
-#### 1. Verificación de Dispositivos y Particiones
+**1. Verificación de Dispositivos y Particiones**
 
 
 `lsblk`
 <img width="620" height="298" alt="image" src="https://github.com/user-attachments/assets/17e3fa2e-3e02-481e-8e41-f37aa518d58e" />
 
 
-#### 2. Mounting Point Status and Space
+**2. Mounting Point Status and Space**
 
 `df -h /srv/samba/Data`
 
 <img width="510" height="66" alt="image" src="https://github.com/user-attachments/assets/d3e1f9a9-211c-4e5a-a253-958bdb5def92" />
 
 
-#### 3. Persistence Check (fstab)
+**3. Persistence Check (fstab)**
 
 `cat /etc/fstab | grep Data`
 
 <img width="851" height="40" alt="image" src="https://github.com/user-attachments/assets/3c3c326b-c035-432a-8f5b-ea7394c57ef4" />
 
 
-#### 4. Validation of Extended Attributes and ACL
+**4. Validation of Extended Attributes and ACL**
 
 `findmnt -n -o OPTIONS /srv/samba/Data`
 
