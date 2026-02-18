@@ -919,3 +919,17 @@ We install another Linux Sever to make the domain trust
 <img width="799" height="595" alt="imagen" src="https://github.com/user-attachments/assets/d5b3436b-e980-4fff-9db1-c5cb8feb5bc4" />
 
 
+
+
+<img width="616" height="168" alt="imagen" src="https://github.com/user-attachments/assets/f3debf6c-2daf-4552-848e-e246bb7df90d" />
+
+<img width="799" height="231" alt="imagen" src="https://github.com/user-attachments/assets/d2d54bb5-0b57-452e-ae68-22265328c44d" />
+
+
+<img width="800" height="339" alt="imagen" src="https://github.com/user-attachments/assets/8cb90cd3-b4d4-4c00-97ab-d1c1bb2ca4a7" />
+
+
+
+
+
+
