@@ -1217,4 +1217,9 @@ I authenticate myself with a LAB120 user
 
  <img width="555" height="110" alt="image" src="https://github.com/user-attachments/assets/9e8ffd67-0d5c-4a92-8b48-959fac61efbe" />
 
+Clean up
+
+`kdestroy`
+
+<img width="223" height="31" alt="image" src="https://github.com/user-attachments/assets/97fecc7c-f200-47d0-a8b3-1c815c27da76" />
 
