@@ -957,7 +957,12 @@ Install Samba with its packages and dependencies
 `sudo apt install -y acl attr samba samba-dsdb-modules samba-vfs-modules smbclient winbind libpam-winbind libnss-winbind libpam-krb5 krb5-config krb5-user dnsutils chrony net-tools`
 
 
-CLOCKWORK.LOCAL
+LAB120.LAN
+<img width="907" height="285" alt="image" src="https://github.com/user-attachments/assets/36ce743a-b587-41fc-acf4-e92bc4e56a56" />
+
+
 dc.clockwork.local
+
+
 dc.clockwork.local
 
