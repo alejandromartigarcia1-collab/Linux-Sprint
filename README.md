@@ -1083,29 +1083,69 @@ Restart and verify the chronyd service on the Samba AD server.
 Verify domain names:
 `host -t A lab120.lan`
 
+<img width="393" height="71" alt="image" src="https://github.com/user-attachments/assets/0dfaf3ae-23aa-4d4c-9c98-1d069682c802" />
+
+
 `host -t A ls120.lab120.lan`
 
+<img width="452" height="67" alt="image" src="https://github.com/user-attachments/assets/6ca673af-87bf-4442-8f39-328e771a457b" />
+
+
 Verify that the Kerberos and LDAP service records point to the FQDN of your Samba Active Directory server:
-host -t SRV _kerberos._udp.clockwork.local
-host -t SRV _ldap._tcp.clockwork.local
+
+`host -t SRV _kerberos._udp.lab120.lan`
+
+<img width="613" height="42" alt="image" src="https://github.com/user-attachments/assets/78cb578b-0773-4205-b170-34928b50ba79" />
+
+`host -t SRV _ldap._tcp.lab120.lan`
+
+<img width="582" height="51" alt="image" src="https://github.com/user-attachments/assets/fce9dde7-6dff-4d0b-ad72-8cef956b7fea" />
+
 
 Verify the default resources available in Samba Active Directory:
-smbclient -L clockwork.local -N
+
+`smbclient -L clockwork.local -N`
+
+<img width="617" height="191" alt="image" src="https://github.com/user-attachments/assets/5cc241c6-10da-4984-a95a-362c73358c51" />
 
 Check authentication on the Kerberos server using the user manager:
-kinit administrator@CLOCKWORK.LOCAL
-klist
+
+`kinit administrator@CLOCKWORK.LOCAL`
+<img width="617" height="191" alt="image" src="https://github.com/user-attachments/assets/3219284b-18bc-41f7-9c07-b8f588f77723" />
+
+
+
+`klist`
+
+<img width="606" height="142" alt="image" src="https://github.com/user-attachments/assets/dbeaec9c-ad91-46cb-8deb-8934279c3c5a" />
+
 
 Log in to the server via SMB:
-sudo smbclient //localhost/netlogon -U 'administrator'
+`sudo smbclient //localhost/netlogon -U 'administrator'`
+
+<img width="737" height="71" alt="image" src="https://github.com/user-attachments/assets/7ab6af6d-e4e2-4970-8942-4531356fc927" />
+
+
 
 Change the administrator user password:
-sudo samba-tool user setpassword administrator
+
+`sudo samba-tool user setpassword administrator`
+
+<img width="640" height="85" alt="image" src="https://github.com/user-attachments/assets/1f37899d-e578-47e9-881c-0a5a9c577d2b" />
+
 
 Verify the integrity of the Samba configuration file.
 
-testparm
+`testparm`
+
+<img width="507" height="787" alt="image" src="https://github.com/user-attachments/assets/f9cf7707-31fb-4bf7-8c74-6ea10b76ca7d" />
+
 
 Verify Windows Active Directory Domain Controller (DADC) functionality in 2008: 
+
 `sudo samba-tool domain level show`
+
+<img width="556" height="128" alt="image" src="https://github.com/user-attachments/assets/e6e0b557-bfd9-4bda-a92b-14b4fa6df8b5" />
+
+
 
