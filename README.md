@@ -988,3 +988,56 @@ We only need samba-ac-dc to function as an Active Directory and domain controlle
 
 <img width="937" height="125" alt="image" src="https://github.com/user-attachments/assets/6fa38068-74eb-4a50-878a-c4d01a6b407b" />
 
+## SAMBA ACTIVE DIRECTORY CONFIGURATION
+
+Create a backup of the /etc/samba/smb.conf file
+
+`sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.orig`
+
+<img width="678" height="21" alt="image" src="https://github.com/user-attachments/assets/490745f2-8e2f-4c00-8ff3-ba3fb8676700" />
+
+
+Run the samba-tool command to begin provisioning Samba Active Directory.
+
+`sudo samba-tool domain provision`
+
+
+Realm: LAB120.LAN
+Domain: LAB120
+Server Role: dc
+DNS backend: SAMBA_INTERNAL
+DNS forwarder IP address: 
+
+<img width="941" height="257" alt="image" src="https://github.com/user-attachments/assets/ab455bb6-4c07-404a-be91-d7d74d35a1f3" />
+
+Create a backup of the default Kerberos configuration.
+
+`sudo mv /etc/krb5.conf /etc/krb5.conf.orig`
+
+<img width="597" height="20" alt="image" src="https://github.com/user-attachments/assets/7b9042f4-a44a-4e0b-94d9-67e4d5a1774e" />
+
+
+Replace with the file /var/lib/samba/private/krb5.conf.
+
+`sudo cp /var/lib/samba/private/krb5.conf /etc/krb5.conf`
+
+<img width="702" height="23" alt="image" src="https://github.com/user-attachments/assets/105b68aa-5f7b-4c10-a53d-fce162c01af3" />
+
+
+Start the Samba Active Directory service samba-ad-dc.
+
+`sudo systemctl start samba-ad-dc`
+
+<img width="488" height="28" alt="image" src="https://github.com/user-attachments/assets/a70b9a6f-3402-4af8-9ec3-8d38c84b5c31" />
+
+
+Check the service.
+
+`sudo systemctl status samba-ad-dc`
+
+<img width="942" height="577" alt="image" src="https://github.com/user-attachments/assets/de81b232-1c96-4c49-938c-f9e7807fec44" />
+
+
+
+
+
