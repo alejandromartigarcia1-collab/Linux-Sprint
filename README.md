@@ -972,5 +972,19 @@ ls120.lab120.lan
 
 
 
+Stop and disable the services that the Samba Active Directory server does not require (smbd, nmbd, and winbind)
 
+`sudo systemctl disable --now smbd nmbd winbind`
+
+<img width="923" height="138" alt="image" src="https://github.com/user-attachments/assets/2d76573f-b3ca-4d3d-804a-e1c93f3f336e" />
+
+We only need samba-ac-dc to function as an Active Directory and domain controller.
+
+`sudo systemctl unmask samba-ad-dc`
+
+<img width="516" height="45" alt="image" src="https://github.com/user-attachments/assets/e8d4dfe9-3051-4d91-b1b5-12adfb666e77" />
+
+`sudo systemctl enable samba-ad-dc`
+
+<img width="937" height="125" alt="image" src="https://github.com/user-attachments/assets/6fa38068-74eb-4a50-878a-c4d01a6b407b" />
 
