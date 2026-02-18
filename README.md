@@ -932,5 +932,18 @@ We install another Linux Sever to make the domain trust
 
 Remove symbolic link to the /etc/resolv.conf file
 
+`sudo unlink /etc/resolv.conf`
+<img width="415" height="18" alt="imagen" src="https://github.com/user-attachments/assets/6e52f4d5-7961-4d9a-847f-49aca9786fe1" />
+
+
+
+
+<img width="796" height="598" alt="imagen" src="https://github.com/user-attachments/assets/c0077bf7-e2dc-4c54-9d8f-e212ce34dd27" />
+
+
+
+<img width="437" height="21" alt="imagen" src="https://github.com/user-attachments/assets/1622c6e4-9825-4d69-a832-b88d187f2251" />
+
+
 
 
