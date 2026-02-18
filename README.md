@@ -930,6 +930,7 @@ We install another Linux Sever to make the domain trust
 
 
 
+Remove symbolic link to the /etc/resolv.conf file
 
 
 
