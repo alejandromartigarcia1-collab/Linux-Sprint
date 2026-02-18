@@ -1150,8 +1150,27 @@ Verify Windows Active Directory Domain Controller (DADC) functionality in 2008:
 
 ## TRUST DOMAIN PROCESS
 
+We build trust using this command
+
+`sudo samba-tool domain trust create lab120.lan   --type=forest   --direction=both   -U administrator@lab120.lan`
 
 <img width="940" height="717" alt="image" src="https://github.com/user-attachments/assets/e230cd81-d998-40fb-9e30-5a2bcd8978bb" />
 
 
+Verify trust:
+
+sudo samba-tool domain trust list
+
+<img width="606" height="48" alt="image" src="https://github.com/user-attachments/assets/1bda3171-d848-4119-9ab9-48b153324984" />
+
+
+This command displays the trust details:
+
+sudo samba-tool domain trust show lab120.lan
+
+<img width="1242" height="490" alt="image" src="https://github.com/user-attachments/assets/0f5c35d3-2fee-49f3-8247-526ef7358161" />
+
+
+
+<img width="935" height="323" alt="image" src="https://github.com/user-attachments/assets/8843d7d7-185d-42f3-b6db-477c3c94f0b3" />
 
