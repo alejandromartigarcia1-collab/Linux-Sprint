@@ -961,8 +961,16 @@ LAB120.LAN
 <img width="907" height="285" alt="image" src="https://github.com/user-attachments/assets/36ce743a-b587-41fc-acf4-e92bc4e56a56" />
 
 
-dc.clockwork.local
+ls120.lab120.lan
+
+<img width="907" height="218" alt="image" src="https://github.com/user-attachments/assets/91e70db1-92a4-4ed2-9f7c-d3cd18b7b24f" />
 
 
-dc.clockwork.local
+ls120.lab120.lan
+
+<img width="913" height="222" alt="image" src="https://github.com/user-attachments/assets/51399d25-3dd9-420e-9884-83beac40af2c" />
+
+
+
+
 
