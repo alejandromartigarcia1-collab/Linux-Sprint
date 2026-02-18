@@ -1178,5 +1178,43 @@ Validate trust with this command
 <img width="942" height="142" alt="image" src="https://github.com/user-attachments/assets/98bab33f-f4fc-4316-970b-09e3d21b7737" />
 
 
+Now I'm going to create test users for LAB 120:
+
+**LS120**
+
+ **Create test users**
+
+ `sudo samba-tool user create testuser admin_21   --given-name=Test --surname=User`
+
+<img width="901" height="27" alt="image" src="https://github.com/user-attachments/assets/9cded784-0c95-415f-b00e-1e1954ae4d52" />
+
+
+`sudo samba-tool user create testuser2 admin_21   --given-name=Test --surname=User`
+
+<img width="925" height="32" alt="image" src="https://github.com/user-attachments/assets/fb3bb7dc-f757-454b-8710-b628281453b5" />
+
+**Verify**
+
+`sudo samba-tool user list`
+
+<img width="427" height="123" alt="image" src="https://github.com/user-attachments/assets/dc929015-e441-4b7e-98d0-21296d75ced8" />
+
+
+
+### Cross-domain authentication verification
+
+**LS12**
+
+I authenticate myself with a LAB120 user
+
+`kinit testuser@LAB120.LAN`
+
+<img width="608" height="57" alt="image" src="https://github.com/user-attachments/assets/4a316fce-5e16-4827-b079-e2ee65ca71d1" />
+
+ Verify ticket
+
+ `klist`
+
+ <img width="555" height="110" alt="image" src="https://github.com/user-attachments/assets/9e8ffd67-0d5c-4a92-8b48-959fac61efbe" />
 
 
