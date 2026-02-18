@@ -952,5 +952,12 @@ Remove symbolic link to the /etc/resolv.conf file
 <img width="437" height="21" alt="imagen" src="https://github.com/user-attachments/assets/1622c6e4-9825-4d69-a832-b88d187f2251" />
 
 
+Install Samba with its packages and dependencies
 
+`sudo apt install -y acl attr samba samba-dsdb-modules samba-vfs-modules smbclient winbind libpam-winbind libnss-winbind libpam-krb5 krb5-config krb5-user dnsutils chrony net-tools`
+
+
+CLOCKWORK.LOCAL
+dc.clockwork.local
+dc.clockwork.local
 
