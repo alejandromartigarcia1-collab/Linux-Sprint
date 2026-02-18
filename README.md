@@ -988,7 +988,7 @@ We only need samba-ac-dc to function as an Active Directory and domain controlle
 
 <img width="937" height="125" alt="image" src="https://github.com/user-attachments/assets/6fa38068-74eb-4a50-878a-c4d01a6b407b" />
 
-## SAMBA ACTIVE DIRECTORY CONFIGURATION
+### SAMBA ACTIVE DIRECTORY CONFIGURATION
 
 Create a backup of the /etc/samba/smb.conf file
 
@@ -1038,7 +1038,7 @@ Check the service.
 <img width="942" height="577" alt="image" src="https://github.com/user-attachments/assets/de81b232-1c96-4c49-938c-f9e7807fec44" />
 
 
-## SET UP TIME SYNCHRONIZATION
+### SET UP TIME SYNCHRONIZATION
 
 Change the default permissions and ownership of the /var/lib/samba/ntp_signd/ntp_signed directory. The chrony user/group must have read permissions on the ntp_signed directory.
 
@@ -1078,7 +1078,7 @@ Restart and verify the chronyd service on the Samba AD server.
 <img width="937" height="512" alt="image" src="https://github.com/user-attachments/assets/079a9d29-1568-448d-943b-fc6481f47d0b" />
 
 
-## VERIFY SAMBA ACTIVE DIRECTORY
+### VERIFY SAMBA ACTIVE DIRECTORY
 
 Verify domain names:
 `host -t A lab120.lan`
@@ -1146,6 +1146,12 @@ Verify Windows Active Directory Domain Controller (DADC) functionality in 2008:
 `sudo samba-tool domain level show`
 
 <img width="556" height="128" alt="image" src="https://github.com/user-attachments/assets/e6e0b557-bfd9-4bda-a92b-14b4fa6df8b5" />
+
+
+## TRUST DOMAIN PROCESS
+
+
+<img width="940" height="717" alt="image" src="https://github.com/user-attachments/assets/e230cd81-d998-40fb-9e30-5a2bcd8978bb" />
 
 
 
