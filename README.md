@@ -1038,6 +1038,74 @@ Check the service.
 <img width="942" height="577" alt="image" src="https://github.com/user-attachments/assets/de81b232-1c96-4c49-938c-f9e7807fec44" />
 
 
+## SET UP TIME SYNCHRONIZATION
+
+Change the default permissions and ownership of the /var/lib/samba/ntp_signd/ntp_signed directory. The chrony user/group must have read permissions on the ntp_signed directory.
+
+`sudo chown root:_chrony /var/lib/samba/ntp_signd/`
+
+<img width="657" height="30" alt="image" src="https://github.com/user-attachments/assets/6f13422d-1863-4b56-a9d8-8229e61592f5" />
+
+`sudo chmod 750 /var/lib/samba/ntp_signd/`
+
+<img width="570" height="25" alt="image" src="https://github.com/user-attachments/assets/8c92ed38-2fec-4fbf-b56f-fc0617e40785" />
 
 
+Modify the /etc/chrony/chrony.conf configuration file to enable the chrony NTP server and point the NTP socket location to /var/lib/samba/ntp_signd.
+
+`sudo nano /etc/chrony/chrony.conf`
+
+<img width="513" height="22" alt="image" src="https://github.com/user-attachments/assets/40ab6841-c6cd-4f9a-a5f4-91ef064a2a63" />
+
+bindcmdaddress 192.168.30.42
+allow 192.168.30.0/24
+ntpsigndsocket /var/lib/samba/ntp_signd
+
+<img width="941" height="933" alt="image" src="https://github.com/user-attachments/assets/e996678b-853e-47f6-9871-6bcdd8d6384f" />
+
+
+
+
+Restart and verify the chronyd service on the Samba AD server.
+
+`sudo systemctl restart chronyd`
+
+<img width="472" height="23" alt="image" src="https://github.com/user-attachments/assets/fa7f0092-fb8a-428a-9453-ff4a6a8ce5e2" />
+
+
+`sudo systemctl status chronyd`
+
+<img width="937" height="512" alt="image" src="https://github.com/user-attachments/assets/079a9d29-1568-448d-943b-fc6481f47d0b" />
+
+
+## VERIFY SAMBA ACTIVE DIRECTORY
+
+Verify domain names:
+`host -t A lab120.lan`
+
+`host -t A ls120.lab120.lan`
+
+Verify that the Kerberos and LDAP service records point to the FQDN of your Samba Active Directory server:
+host -t SRV _kerberos._udp.clockwork.local
+host -t SRV _ldap._tcp.clockwork.local
+
+Verify the default resources available in Samba Active Directory:
+smbclient -L clockwork.local -N
+
+Check authentication on the Kerberos server using the user manager:
+kinit administrator@CLOCKWORK.LOCAL
+klist
+
+Log in to the server via SMB:
+sudo smbclient //localhost/netlogon -U 'administrator'
+
+Change the administrator user password:
+sudo samba-tool user setpassword administrator
+
+Verify the integrity of the Samba configuration file.
+
+testparm
+
+Verify Windows Active Directory Domain Controller (DADC) functionality in 2008: 
+`sudo samba-tool domain level show`
 
