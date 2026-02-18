@@ -916,5 +916,6 @@ We install another Linux Sever to make the domain trust
 <img width="798" height="320" alt="image" src="https://github.com/user-attachments/assets/440d3c14-49c0-4242-8bf5-fe312c9f06e1" />
 
 
+<img width="799" height="595" alt="imagen" src="https://github.com/user-attachments/assets/d5b3436b-e980-4fff-9db1-c5cb8feb5bc4" />
 
 
